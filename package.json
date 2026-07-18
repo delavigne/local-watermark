@@ -12,7 +12,7 @@
     "@nextcloud/dialogs": "^5.3.1",
     "@nextcloud/initial-state": "^2.1.0",
     "pdf-lib": "^1.17.1",
-    "pdfjs-dist": "^4.0.3",
+    "pdfjs-dist": "^6.1.200",
     "vue": "^3.4.21"
   },
   "devDependencies": {
