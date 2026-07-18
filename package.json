@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@nextcloud/vite-config": "^1.0.0",
-    "typescript": "^5.3.3",
+    "typescript": "^7.0.2",
     "vite": "^5.1.4",
     "vue-tsc": "^1.8.27"
   }
