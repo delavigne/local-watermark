@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@nextcloud/capabilities": "^1.2.0",
-    "@nextcloud/dialogs": "^5.3.1",
+    "@nextcloud/dialogs": "^7.4.1",
     "@nextcloud/initial-state": "^2.1.0",
     "pdf-lib": "^1.17.1",
     "pdfjs-dist": "^4.0.3",
