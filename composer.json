@@ -1,0 +1,72 @@
+{
+	"name": "nextcloud/localwatermark",
+	"description": "<![CDATA[Filigrane Local (local_watermark) est une application Nextcloud permettant de sécuriser vos documents PDF sensibles directement depuis votre navigateur. 
+
+Contrairement aux outils classiques qui ajoutent un simple calque de texte superficiel (facilement supprimable), cette application utilise un processus d'aplatissement (rasterization) qui fusionne définitivement le filigrane avec le contenu du document.
+
+✨ CARACTÉRISTIQUES PRINCIPALES :
+• Intégration transparente : Disponible via le menu contextuel "..." de l'application Fichiers de Nextcloud.
+• Confidentialité absolue : Traitement 100% en JavaScript côté client. Vos documents ne quittent jamais votre appareil.
+• Résistance avancée aux IA (Anti-Watermark Remover) : Génère un motif de vagues géométriques irrégulières combiné à un mode de fusion des pixels (multiply), rendant les outils d'effacement par IA totalement inefficaces.
+• Performance & Légèreté : Compression JPEG optimisée garantissant des fichiers finaux légers (100 à 150 Ko par page), parfaits pour le partage.
+• Zéro charge serveur : Aucune dépendance lourde requise côté serveur. Votre instance Nextcloud reste rapide.
+
+---
+
+Local Watermark (local_watermark) is a Nextcloud application designed to secure your sensitive PDF documents directly from your browser.
+
+Unlike traditional tools that simply overlay a superficial text layer (which is easily removed), this app uses a flattening process (rasterization) that permanently merges the watermark with the document content.
+
+✨ KEY FEATURES:
+• Seamless Integration: Available via the "..." context menu in the Nextcloud Files app.
+• Absolute Privacy: 100% client-side JavaScript processing. Your documents never leave your device.
+• Advanced AI Resistance (Anti-Watermark Remover): Generates an irregular, geometric wave pattern combined with a pixel blend mode (multiply), making AI-powered removal tools completely ineffective.
+• Performance & Lightweight: Optimized JPEG compression ensures lightweight final files (100 to 150 KB per page), perfect for sharing.
+• Zero Server Load: No heavy server-side dependencies required. Your Nextcloud instance remains fast.]]>",
+	"license": "AGPL-3.0-or-later",
+	"authors": [
+		{
+			"name": "Alain Delavigne",
+			"email": "alain@delavigne.com",
+			"homepage": ""
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"OCA\\LocalWatermark\\": "lib/"
+		}
+	},
+	"scripts": {
+		"post-install-cmd": [
+			"@composer bin all install --ansi"
+		],
+		"post-update-cmd": [
+			"@composer bin all install --ansi"
+		],
+		"lint": "find . -name \\*.php -not -path './vendor/*' -not -path './vendor-bin/*' -not -path './build/*' -print0 | xargs -0 -n1 php -l",
+		"cs:check": "php-cs-fixer fix --dry-run --diff",
+		"cs:fix": "php-cs-fixer fix",
+		"psalm": "psalm --threads=1 --no-cache",
+		"test:unit": "phpunit tests -c tests/phpunit.xml --colors=always --fail-on-warning --fail-on-risky",
+		"openapi": "generate-spec",
+		"rector": "rector && composer cs:fix"
+	},
+	"require": {
+		"bamarni/composer-bin-plugin": "^1.8",
+		"php": "^8.1"
+	},
+	"require-dev": {
+		"nextcloud/ocp": "dev-stable31",
+		"roave/security-advisories": "dev-latest"
+	},
+	"config": {
+		"allow-plugins": {
+			"bamarni/composer-bin-plugin": true
+		},
+		"optimize-autoloader": true,
+		"sort-packages": true,
+		"platform": {
+			"php": "8.1"
+		}
+	}
+}

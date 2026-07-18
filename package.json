@@ -1,0 +1,24 @@
+{
+  "name": "localwatermark",
+  "version": "1.3.0",
+  "description": "Nextcloud extension for client-side secure PDF watermarking with Local WebWorkers",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && cp node_modules/pdfjs-dist/build/pdf.worker.mjs js/pdf.worker.js 2>/dev/null || cp node_modules/pdfjs-dist/build/pdf.worker.min.js js/pdf.worker.js 2>/dev/null || true"
+  },
+  "dependencies": {
+    "@nextcloud/capabilities": "^1.2.0",
+    "@nextcloud/dialogs": "^5.3.1",
+    "@nextcloud/initial-state": "^2.1.0",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^4.0.3",
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@nextcloud/vite-config": "^1.0.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.1.4",
+    "vue-tsc": "^1.8.27"
+  }
+}

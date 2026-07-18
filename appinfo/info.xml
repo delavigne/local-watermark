@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+    <id>localwatermark</id>
+    <name>Local Watermark</name>
+    <summary>Securely watermark PDF files 100% client-side with AI-resistant rasterization.</summary>
+    <description>Local Watermark allows users to add permanent, secure, and flattened watermarks to PDF files directly within their browser. No data leaves your machine, ensuring absolute privacy. It uses geometric wave pattern overlays, structural pixel grain noise, and dynamic Web Worker multitasking to neutralize AI removal tools without freezing your system. Fully self-contained local PDF.js worker compliance for strict CSP environments.</description>
+    <version>1.3.0</version>
+    <licence>agpl</licence>
+    <author>Alain Delavigne</author>
+    <namespace>LocalWatermark</namespace>
+    <category>security</category>
+    <bugs>https://github.com/example/localwatermark/issues</bugs>
+    <dependencies>
+        <nextcloud min-version="31" max-version="33"/>
+    </dependencies>
+</app>

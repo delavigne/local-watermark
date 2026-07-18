@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+    <!-- Trame de fond (Filigrane symbolique) -->
+    <path d="M6 14 L26 14 M6 18 L26 18 M6 22 L26 22" stroke="#0077c2" stroke-width="1.5" stroke-linecap="round" opacity="0.3" />
+    <path d="M10 6 L10 26 M14 6 L14 26 M18 6 L18 26" stroke="#0077c2" stroke-width="1.5" stroke-linecap="round" opacity="0.3" />
+    
+    <!-- Document arrière -->
+    <path d="M10 6 h10 l6 6 v14 a2 2 0 0 1 -2 2 h-14 a2 2 0 0 1 -2 -2 v-18 a2 2 0 0 1 2 -2 z" fill="#ffffff" stroke="#0077c2" stroke-width="2" stroke-linejoin="round"/>
+    
+    <!-- Document avant (Décalé pour l'effet de pile) -->
+    <path d="M6 10 h10 l6 6 v14 a2 2 0 0 1 -2 2 h-14 a2 2 0 0 1 -2 -2 v-18 a2 2 0 0 1 2 -2 z" fill="#ffffff" stroke="#005fa0" stroke-width="2" stroke-linejoin="round"/>
+    
+    <!-- Lignes de texte symboliques sur le document avant -->
+    <line x1="9" y1="15" x2="19" y2="15" stroke="#005fa0" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="9" y1="19" x2="17" y2="19" stroke="#005fa0" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="9" y1="23" x2="15" y2="23" stroke="#005fa0" stroke-width="1.5" stroke-linecap="round" />
+    
+    <!-- Sceau de sécurité / Badge -->
+    <circle cx="19" cy="23" r="3.5" fill="#10b981" />
+    <path d="M17.5 23 l1 1 l2 -2" fill="none" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
